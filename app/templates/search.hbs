@@ -1,0 +1,12 @@
+<h2>Search HSMART RefId</h2>
+
+<div>
+  <form name="search_form"><span>Ref Id</span>:{{input name="refid"}}<span>{{input type="submit" value="search"}}</span></form>
+</div>
+
+<ul>
+{{#each model.response.docs as |doc|}}
+  <li>{{doc.ref_id}}</li>
+  <li>{{doc.created_time}}</li>
+{{/each}}
+</ul>
